@@ -38,6 +38,38 @@ The model combines a lightweight state-space FeatureMask with depthwise separabl
 
 <p align="center"><sub>Figure 1 from the paper. The classifier is used during training; Griffin–Lim refinement is used during inference.</sub></p>
 
+### Module breakdown
+
+#### Encoder: DSConv2D + ASPP
+
+The encoder fuses low-, mid-, and high-level representations while ASPP captures multi-scale context with efficient atrous depthwise separable convolution.
+
+<div align="center">
+  <img src="assets/encoder-architecture.png" width="96%" alt="Figure 2: internal architecture of the encoder module" />
+</div>
+
+<p align="center"><sub>Figure 2 from the paper: depthwise separable encoder with multi-level feature fusion and ASPP.</sub></p>
+
+#### Dual-path FeatureMask
+
+Temporal and frequency LightS4 paths exchange information through cross-gating before producing the enhancement mask.
+
+<div align="center">
+  <img src="assets/featuremask-architecture.png" width="92%" alt="Figure 3: internal architecture of the FeatureMask module" />
+</div>
+
+<p align="center"><sub>Figure 3 from the paper: dual-path time-frequency FeatureMask.</sub></p>
+
+#### LightS4 state-space block
+
+LightS4 uses a compact state-space kernel to model long-range dependencies with a structured hidden state and efficient emission step.
+
+<div align="center">
+  <img src="assets/lights4-architecture.png" width="88%" alt="Figure 4: internal architecture of the LightS4 module" />
+</div>
+
+<p align="center"><sub>Figure 4 from the paper: internal state-space computation of LightS4.</sub></p>
+
 ## Results
 
 ### VoiceBank + DEMAND
