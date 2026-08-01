@@ -1,7 +1,8 @@
 # Paper assets notice
 
-The images in `assets/model-overview.png`, `assets/main-results-table.png`,
-`assets/wsj0-generalization-tables.png`, and
+The images in `assets/model-overview.png`, `assets/encoder-architecture.png`,
+`assets/featuremask-architecture.png`, `assets/lights4-architecture.png`,
+`assets/main-results-table.png`, `assets/wsj0-generalization-tables.png`, and
 `assets/librispeech-generalization-tables.png` reproduce selected figures and
 tables from:
 
