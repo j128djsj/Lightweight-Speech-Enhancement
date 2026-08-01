@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">Lightweight Speech Enhancement</title>
+  <desc id="desc">State-space modeling meets efficient convolution.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07152f"/>
+      <stop offset="0.48" stop-color="#102a56"/>
+      <stop offset="1" stop-color="#25125d"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="0.5" stop-color="#818cf8"/>
+      <stop offset="1" stop-color="#d946ef"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#67e8f9" stop-opacity=".32"/>
+      <stop offset="1" stop-color="#67e8f9" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36" fill="none" stroke="#93c5fd" stroke-opacity=".08"/>
+    </pattern>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="360" rx="28" fill="url(#bg)"/>
+  <rect width="1200" height="360" rx="28" fill="url(#grid)"/>
+  <circle cx="960" cy="160" r="190" fill="url(#glow)"/>
+  <circle cx="1050" cy="80" r="90" fill="#c026d3" opacity=".10" filter="url(#soft)"/>
+  <path d="M720 177 C738 177 738 133 756 133 S774 218 792 218 S810 95 828 95 S846 251 864 251 S882 74 900 74 S918 235 936 235 S954 118 972 118 S990 204 1008 204 S1026 150 1044 150 S1062 180 1080 180" fill="none" stroke="url(#accent)" stroke-width="8" stroke-linecap="round"/>
+  <path d="M720 177 C738 177 738 133 756 133 S774 218 792 218 S810 95 828 95 S846 251 864 251 S882 74 900 74 S918 235 936 235 S954 118 972 118 S990 204 1008 204 S1026 150 1044 150 S1062 180 1080 180" fill="none" stroke="#67e8f9" stroke-width="24" stroke-linecap="round" opacity=".12" filter="url(#soft)"/>
+  <circle cx="900" cy="177" r="120" fill="none" stroke="#a5b4fc" stroke-opacity=".18"/>
+  <circle cx="900" cy="177" r="86" fill="none" stroke="#67e8f9" stroke-opacity=".15"/>
+  <text x="72" y="92" fill="#67e8f9" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="4">OFFICIAL PYTORCH IMPLEMENTATION</text>
+  <text x="68" y="157" fill="#ffffff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="52" font-weight="800">Lightweight Speech</text>
+  <text x="68" y="216" fill="#ffffff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="52" font-weight="800">Enhancement</text>
+  <text x="72" y="257" fill="#c7d2fe" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20">State-space modeling meets efficient convolution.</text>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700">
+    <rect x="70" y="291" width="95" height="36" rx="18" fill="#22d3ee" fill-opacity=".14" stroke="#22d3ee" stroke-opacity=".45"/>
+    <text x="118" y="314" text-anchor="middle" fill="#a5f3fc">LIGHTS4</text>
+    <rect x="177" y="291" width="102" height="36" rx="18" fill="#818cf8" fill-opacity=".14" stroke="#818cf8" stroke-opacity=".50"/>
+    <text x="228" y="314" text-anchor="middle" fill="#c7d2fe">DSCONV</text>
+    <rect x="291" y="291" width="82" height="36" rx="18" fill="#c026d3" fill-opacity=".14" stroke="#d946ef" stroke-opacity=".50"/>
+    <text x="332" y="314" text-anchor="middle" fill="#f5d0fe">AISC</text>
+    <rect x="385" y="291" width="82" height="36" rx="18" fill="#10b981" fill-opacity=".14" stroke="#34d399" stroke-opacity=".50"/>
+    <text x="426" y="314" text-anchor="middle" fill="#a7f3d0">ASPP</text>
+  </g>
+</svg>
+
