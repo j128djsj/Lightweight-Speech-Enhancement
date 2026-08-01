@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lightweight-speech-enhancement"
+version = "0.1.0"
+description = "State-space and depthwise separable convolutional speech enhancement"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Chen Jiang" },
+  { name = "Dai Gao" },
+  { name = "Sirui Wang" },
+  { name = "Chengxuan Zou" },
+  { name = "Jie Liu" },
+]
+keywords = ["speech enhancement", "state-space model", "depthwise convolution", "audio"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Multimedia :: Sound/Audio :: Speech",
+]
+dependencies = [
+  "torch>=2.1",
+  "librosa>=0.10",
+  "numpy>=1.24",
+  "einops>=0.7",
+  "pesq>=0.0.4",
+]
+
+[project.optional-dependencies]
+profile = ["thop>=0.1.1"]
+
+[project.urls]
+Paper = "https://doi.org/10.1016/j.dsp.2026.105987"
+Source = "https://github.com/j128djsj/Lightweight-Speech-Enhancement"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+

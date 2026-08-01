@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the associated paper."
+title: "Lightweight Speech Enhancement"
+type: software
+authors:
+  - family-names: Jiang
+    given-names: Chen
+  - family-names: Gao
+    given-names: Dai
+  - family-names: Wang
+    given-names: Sirui
+  - family-names: Zou
+    given-names: Chengxuan
+  - family-names: Liu
+    given-names: Jie
+version: 0.1.0
+date-released: 2026-08-01
+repository-code: "https://github.com/j128djsj/Lightweight-Speech-Enhancement"
+preferred-citation:
+  type: article
+  title: "Lightweight speech enhancement with state-space model and depthwise separable convolution"
+  authors:
+    - family-names: Jiang
+      given-names: Chen
+    - family-names: Gao
+      given-names: Dai
+    - family-names: Wang
+      given-names: Sirui
+    - family-names: Zou
+      given-names: Chengxuan
+    - family-names: Liu
+      given-names: Jie
+  journal: "Digital Signal Processing"
+  volume: "174"
+  year: 2026
+  doi: "10.1016/j.dsp.2026.105987"
+
