@@ -1,7 +1,9 @@
 # Paper assets notice
 
-The images in `assets/model-overview.png`, `assets/ablation-visualization.png`,
-and `assets/robustness.png` are figures reproduced from:
+The images in `assets/model-overview.png`, `assets/main-results-table.png`,
+`assets/wsj0-generalization-tables.png`, and
+`assets/librispeech-generalization-tables.png` reproduce selected figures and
+tables from:
 
 > Chen Jiang, Dai Gao, Sirui Wang, Chengxuan Zou, Jie Liu. “Lightweight speech
 > enhancement with state-space model and depthwise separable convolution.”
@@ -15,4 +17,3 @@ rights holder(s).
 
 The original publisher-formatted PDF is intentionally not distributed in this
 repository. Use the DOI link above to access the version of record.
-
