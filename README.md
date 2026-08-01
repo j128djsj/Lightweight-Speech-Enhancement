@@ -20,11 +20,7 @@
 
 ## At a glance
 
-The model combines a lightweight state-space FeatureMask with depthwise separable convolution, psychoacoustic spectral compression, multi-scale context modeling, and lightweight phase refinement. It is designed for a strong quality–efficiency trade-off rather than post-hoc model compression.
-
-<div align="center">
-  <img src="assets/metrics.svg" width="96%" alt="1.65 million parameters, 0.50 G MACs, PESQ 3.32, STOI 0.956" />
-</div>
+The model combines a lightweight state-space FeatureMask with depthwise separable convolution, psychoacoustic spectral compression, multi-scale context modeling, and lightweight phase refinement. On VoiceBank + DEMAND, it reaches **PESQ 3.32** and **STOI 0.956** with only **1.65M parameters** and **0.50G MACs**.
 
 ### Why it is lightweight
 
@@ -46,31 +42,33 @@ The model combines a lightweight state-space FeatureMask with depthwise separabl
 
 ### VoiceBank + DEMAND
 
-| Model | Params ↓ | MACs ↓ | PESQ ↑ | STOI ↑ |
-|---|---:|---:|---:|---:|
-| DeepFilterNet3 | 2.31M | **0.36G** | 3.17 | 0.94 |
-| DeConformer-SENet | **1.57M** | 3.05G | 3.24 | **0.96** |
-| SEMamba | 2.25M | 32.73G | **3.52** | **0.96** |
-| **Ours** | 1.65M | 0.50G | 3.32 | **0.96** |
+<div align="center">
+  <img src="assets/main-results-table.png" width="96%" alt="Table 1: comparison with existing models on VoiceBank and DEMAND" />
+</div>
+
+<p align="center"><sub>Table 1 from the paper: comparison with existing models on VoiceBank + DEMAND.</sub></p>
 
 Compared with SEMamba, the proposed model uses about **65× fewer MACs** while retaining competitive perceptual quality. On an Intel Core i5-1135G7 CPU, the paper reports an **RTF of 0.13**.
 
-### Robustness across noise levels
+### Cross-dataset generalization
+
+The paper evaluates seen and strictly held-out noise conditions across two additional speech corpora, with SNRs ranging from −5 dB to 5 dB.
+
+#### WSJ0-SI84
 
 <div align="center">
-  <img src="assets/robustness.png" width="96%" alt="PESQ and STOI robustness visualization across synthesized SNR conditions" />
+  <img src="assets/wsj0-generalization-tables.png" width="96%" alt="Tables 5 and 6: PESQ and STOI generalization results on WSJ0-SI84" />
 </div>
 
-<p align="center"><sub>Figure 10 from the paper. Points above the identity line indicate enhancement over the noisy input.</sub></p>
+<p align="center"><sub>Tables 5–6 from the paper: PESQ and STOI under seen and unseen noises on WSJ0-SI84.</sub></p>
 
-<details>
-<summary><strong>View qualitative ablation visualization</strong></summary>
-<br />
+#### LibriSpeech
+
 <div align="center">
-  <img src="assets/ablation-visualization.png" width="96%" alt="Spectrogram and waveform ablation visualization" />
+  <img src="assets/librispeech-generalization-tables.png" width="96%" alt="Tables 7 and 8: PESQ and STOI generalization results on LibriSpeech" />
 </div>
-<p align="center"><sub>Figure 7 from the paper: clean, noisy, enhanced, and key module ablations.</sub></p>
-</details>
+
+<p align="center"><sub>Tables 7–8 from the paper: PESQ and STOI under seen and unseen noises on LibriSpeech.</sub></p>
 
 ## Quick start
 
@@ -130,7 +128,7 @@ python scripts/profile_flops.py
 
 ```text
 .
-├── assets/                         # README visuals from the paper
+├── assets/                         # model figure and original result tables
 ├── scripts/
 │   ├── train.py                    # training entry point
 │   ├── profile_model.py            # parameter profiling
@@ -163,4 +161,3 @@ If this repository is useful in your research, please cite the paper:
 ## License and paper assets
 
 The source code is released under the [MIT License](LICENSE). Figures reproduced from the article are included for scholarly description and attribution and are **not** covered by the code license; see [NOTICE.md](NOTICE.md).
-
