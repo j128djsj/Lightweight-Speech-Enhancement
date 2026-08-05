@@ -20,7 +20,7 @@
 
 ## At a glance
 
-The model combines a lightweight state-space FeatureMask with depthwise separable convolution, psychoacoustic spectral compression, multi-scale context modeling, and lightweight phase refinement. On VoiceBank + DEMAND, it reaches **PESQ 3.32** and **STOI 0.956** with only **1.65M parameters** and **0.50G MACs**.
+The model combines a lightweight state-space FeatureMask with depthwise separable convolution, psychoacoustic spectral compression, multi-scale context modeling, and efficient phase refinement. On VoiceBank + DEMAND, it reaches **PESQ 3.32** and **STOI 0.956** with only **1.65M parameters** and **0.50G MACs**.
 
 ### Why it is lightweight
 
